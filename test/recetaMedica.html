@@ -1,0 +1,664 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Receta médica - Modelo para la impresión</title>
+    <!---BULMA--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <!---FONTAWESOME--->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!---CSS--->
+    <style>
+        /*.table td,
+        .table th {
+            border: 0px;
+            border-width: 0 0 0px;
+        }*/
+        .is-size-1 {
+            font-size: 4rem !important;
+        }
+
+        fieldset.scheduler-border {
+            border: 2px groove #f0f0f1 !important;
+            border-radius: 5px;
+            padding: .5em 1.4em 1.4em 1.4em !important;
+            margin: 0 0 0.5em 0 !important;
+            -webkit-box-shadow: 0px 0px 0px 0px #000;
+            box-shadow: 0px 0px 0px 0px #000;
+        }
+
+        legend.scheduler-border {
+            font-size: 1.3rem !important;
+            font-weight: 500;
+            text-align: left !important;
+            width: auto;
+            padding: 0 10px;
+            border-bottom: none;
+            color: inherit;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="section">
+<!--------HEADER-------->
+        <section class="section" style="border-style: solid; border-color: hsl(0, 0%, 86%);">
+            <table class="table is-fullwidth is-narrow">
+                <tbody>
+                    <tr>
+                        <td>
+                            <!---LOGO SGMED---->
+                            <div class="columns is-multiline is-vcentered"
+                                style="width: 200px; height: 200px; display: flex;align-items: center;">
+                                <div class="column is-8">
+                                    <div class="is-size-2 has-text-primary has-text-right">
+                                        <span class="icon">
+                                            <i class="fas fa-2x fa-tablets"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="column is-1">
+                                    <p class="has-text-primary has-text-weight-bold is-size-1">
+                                        SGMed
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <!---INFORMACION DEL DOCTOR---->
+                            <div class="is-vcentered" style="height:40px;"></div>
+                            <p class="is-size-4 has-text-grey-dark has-text-centered">Dr. Luis Manuel Figueroa Romero
+                            </p>
+                            <p class="is-size-4 has-text-grey-dark has-text-centered">Universidad Nacional Autónoma de
+                                México</p>
+                            <p class="is-size-5 has-text-grey-dark has-text-centered has-text-weight-semibold">Médico
+                                Cirujano</p>
+                            <p class="is-size-5 has-text-grey-dark has-text-centered has-text-weight-semibold">CED.
+                                PROF.
+                                3504653</p>
+                            <p class="is-size-5 has-text-grey-dark has-text-centered">Calle 4 #334 Col. Agrícola
+                                Pantitlán.
+                                Alcd. Iztacalco CDMX. C.P. 08100</p>
+                            </div>
+                        </td>
+                        <td>
+                            <!---CODIGO QR--->
+                            <div align="center">
+                                <figure class="image">
+                                    <img src="qr.png" style="width: 200px; height: 200px;">
+                                </figure>
+                                <p class="is-size-5 has-text-grey-dark">
+                                    <strong>Folio:</strong> FIRL95
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+<!--------INFORMACION PACIENTE I-------->
+            <section class="section">
+                <!--------FECHA-------->
+                <div align="right">
+                    <p class="is-size-5 has-text-grey-dark">
+                        <strong>FECHA: </strong>
+                        Martes, 23 de Julio del 2019 a las 12:42 p.m.
+                    </p>
+                </div>
+                <br>
+                <br>
+                <!--------NOMBRE-------->
+                <table class="table is-narrow is-fullwidth">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="columns is-multiline">
+                                    <div class="column is-6 is-size-5" style="width: 100px;">
+                                        <strong>PACIENTE: </strong>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="is-size-5">
+                                    <u>Luis Manuel Figueroa Romero</u>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="columns is-multiline">
+                                    <div class="column is-6 is-size-5" style="width: 100px;">
+                                        <strong>EDAD: </strong>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="width: 150px;">
+                                <div class="is-size-5">
+                                    <u>23</u>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="columns is-multiline">
+                                    <div class="column is-6 is-size-5" style="width: 250px;">
+                                        <strong>CORREO ELECTRÓNICO: </strong>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="is-size-5">
+                                    <u>luchofig28@gmail.com</u>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+<!--------DATOS MÉDICOS-------->
+            <section class="section">
+                <table class="table is-fullwidth is-narrow">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <!---Alergias---->
+                                <table class="table is-narrow" style="width: 400px;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="columns is-multiline">
+                                                    <div class="column is-6" style="width: 217px;">
+                                                        <span class="tag is-light"
+                                                            style="display: flex;width: 100%; margin-bottom: 20px; border: 1px solid #333;">
+                                                            <strong
+                                                                class="has-text-grey-darker has-text-weight-medium is-size-6">
+                                                                Alergias:
+                                                            </strong>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="is-size-6">
+                                                    <u>Negadas</u>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>
+                                <!---T.A.--->
+                                <table class="table is-narrow" style="width: 360px;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="columns is-multiline">
+                                                    <div class="column is-6" style="width: 217px;">
+                                                        <span class="tag is-light"
+                                                            style="display: flex;width: 100%; margin-bottom: 20px; border: 1px solid #333;">
+                                                            <strong
+                                                                class="has-text-grey-darker has-text-weight-medium is-size-6">
+                                                                T.A. :
+                                                            </strong>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="is-size-6">
+                                                    <u>90/70</u>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>
+                                <!---F.C.--->
+                                <table class="table is-narrow" style="width: 360px;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="columns is-multiline">
+                                                    <div class="column is-6" style="width: 217px;">
+                                                        <span class="tag is-light"
+                                                            style="display: flex;width: 100%; margin-bottom: 20px; border: 1px solid #333;">
+                                                            <strong
+                                                                class="has-text-grey-darker has-text-weight-medium is-size-6">
+                                                                F.C. :
+                                                            </strong>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="is-size-6">
+                                                    <u>68</u>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>
+                                <!---F.R.---->
+                                <table class="table is-narrow" style="width: 360px;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="columns is-multiline">
+                                                    <div class="column is-6" style="width: 217px;">
+                                                        <span class="tag is-light"
+                                                            style="display: flex;width: 100%; margin-bottom: 20px; border: 1px solid #333;">
+                                                            <strong
+                                                                class="has-text-grey-darker has-text-weight-medium is-size-6">
+                                                                F.R. :
+                                                            </strong>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="is-size-6">
+                                                    <u>12</u>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table is-fullwidth is-narrow">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <!---TEMP---->
+                                <table class="table is-narrow" style="width: 360px;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="columns is-multiline">
+                                                    <div class="column is-6" style="width: 217px;">
+                                                        <span class="tag is-light"
+                                                            style="display: flex;width: 100%; margin-bottom: 20px; border: 1px solid #333;">
+                                                            <strong
+                                                                class="has-text-grey-darker has-text-weight-medium is-size-6">
+                                                                TEMP:
+                                                            </strong>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="is-size-6">
+                                                    <u>37 C</u>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>
+                                <!---PESO--->
+                                <table class="table is-narrow" style="width: 360px;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="columns is-multiline">
+                                                    <div class="column is-6" style="width: 217px;">
+                                                        <span class="tag is-light"
+                                                            style="display: flex;width: 100%; margin-bottom: 20px; border: 1px solid #333;">
+                                                            <strong
+                                                                class="has-text-grey-darker has-text-weight-medium is-size-6">
+                                                                PESO:
+                                                            </strong>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="is-size-6">
+                                                    <u>80 Kg</u>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>
+                                <!---TALLA--->
+                                <table class="table is-narrow" style="width: 360px;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="columns is-multiline">
+                                                    <div class="column is-6" style="width: 217px;">
+                                                        <span class="tag is-light"
+                                                            style="display: flex;width: 100%; margin-bottom: 20px; border: 1px solid #333;">
+                                                            <strong
+                                                                class="has-text-grey-darker has-text-weight-medium is-size-6">
+                                                                TALLA:
+                                                            </strong>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="is-size-6">
+                                                    <u>1.64 mts</u>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+<!--------DIAGNOSTICO-------->
+            <section class="section">
+                <!---DXTX---->
+                <span class="tag"
+                    style="display: flex;width: 100%; margin-bottom: 0px; border: 1px solid #333; background-color: #ccc;">
+                    <strong class="has-text-grey-darker has-text-weight-medium is-size-6">
+                        DxTx (Diagnóstico):
+                    </strong>
+                </span>
+                <p class="has-text-justified"
+                    style="border: 1px solid #333; border-radius: 5px; padding: 20px; margin-top: 0px; background-color: hsl(0, 0%, 96%)">
+                    Al primer paciente se le había diagnosticado 10 años atrás de un cáncer
+                    insipiente
+                    de próstata el cual fue irradiado completamente; después de presentarse una
+                    bronquitis, se le diagnostico de posible cáncer pulmonar por lo cual se le
+                    opera, y
+                    en primera instancia se cree que es un tuberculoma; al examen cuidadoso se
+                    encuentra
+                    que es una rara enfermedad de arte­ritis necrosante muy infrecuente.Al
+                    primer paciente se le había diagnosticado 10 años atrás de un cáncer
+                    insipiente
+                    de próstata el cual fue irradiado completamente; después de presentarse una
+                    bronquitis, se le diagnostico de posible cáncer pulmonar por lo cual se le
+                    opera, y
+                    en primera instancia se cree que es un tuberculoma; al examen cuidadoso se
+                    encuentra
+                    que es una rara enfermedad de arte­ritis necrosante muy infrecuente.
+                </p>
+            </section>
+<!--------MEDICAMENTOS FARMACEUTICOS-------->
+            <section class="section">
+                <span class="tag"
+                    style="display: flex;width: 100%; margin-bottom: 0px; border: 1px solid #333; background-color: #ccc;">
+                    <strong class="has-text-grey-darker has-text-weight-medium is-size-6">
+                        Medicamentos farmacéuticos recetados:
+                    </strong>
+                </span>
+            </section>
+<!--------MEDICAMENTOS MAGISTRALES-------->
+            <section class="section">
+                <span class="tag"
+                    style="display: flex;width: 100%; margin-bottom: 0px; border: 1px solid #333; background-color: #ccc;">
+                    <strong class="has-text-grey-darker has-text-weight-medium is-size-6">
+                        Medicamentos magistrales recetados:
+                    </strong>
+                </span>
+            </section>
+<!--------DATOS ADMINISTRATIVOS-------->
+            <section class="section">
+                <fieldset class="scheduler-border">
+                    <legend class="scheduler-border has-text-grey">Información del médico</legend>
+                    <section class="section">
+                        <table class="table is-fullwidth is-narrow">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <!---TELEFONO EMERGENCIAS---->
+                                        <table class="table is-narrow" style="width: 450px;">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="columns is-multiline">
+                                                            <div class="column is-6" style="width: 280px;">
+                                                                <span>
+                                                                    <strong
+                                                                        class="has-text-grey-darker has-text-weight-semibold is-size-5">
+                                                                        Teléfono de emergencias:
+                                                                    </strong>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="is-size-5">
+                                                            55 6785 4090
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <!---TELEFONO CELULAR--->
+                                        <table class="table is-narrow" style="width: 420px;">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="columns is-multiline">
+                                                            <div class="column is-6" style="width: 280px;">
+                                                                <span>
+                                                                    <strong
+                                                                        class="has-text-grey-darker has-text-weight-semibold is-size-5">
+                                                                        Teléfono celular:
+                                                                    </strong>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="is-size-5">
+                                                            55 6785 4090
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <!---TELEFONO OFICINA--->
+                                        <table class="table is-narrow" style="width: 450px;">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="columns is-multiline">
+                                                            <div class="column is-6" style="width: 280px;">
+                                                                <span>
+                                                                    <strong
+                                                                        class="has-text-grey-darker has-text-weight-medium is-size-5">
+                                                                        Teléfono de la oficina:
+                                                                    </strong>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="is-size-5">
+                                                            55 6785 4090
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <table class="table is-fullwidth is-narrow">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <!---EMAIL MEDICO---->
+                                        <table class="table is-narrow" style="width: 450px;">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="columns is-multiline">
+                                                            <div class="column is-6" style="width: 280px;">
+                                                                <span>
+                                                                    <strong
+                                                                        class="has-text-grey-darker has-text-weight-semibold is-size-5">
+                                                                        Correo electrónico:
+                                                                    </strong>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="is-size-5">
+                                                            luchofig28@gmail.com
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <!---CURP MEDICO--->
+                                        <table class="table is-narrow" style="width: 420px;">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="columns is-multiline">
+                                                            <div class="column is-6" style="width: 280px;">
+                                                                <span>
+                                                                    <strong
+                                                                        class="has-text-grey-darker has-text-weight-semibold is-size-5">
+                                                                        CURP:
+                                                                    </strong>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="is-size-5">
+                                                            FIRL950428HDF02
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <!---RFC MEDICO--->
+                                        <table class="table is-narrow" style="width: 450px;">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="columns is-multiline">
+                                                            <div class="column is-6" style="width: 280px;">
+                                                                <span>
+                                                                    <strong
+                                                                        class="has-text-grey-darker has-text-weight-medium is-size-5">
+                                                                        RFC:
+                                                                    </strong>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="is-size-5">
+                                                            FIRL9804286C8
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </fieldset>
+            </section>
+            <div class="columns">
+                <div class="column is-12"></div>
+            </div>
+<!--------INFORMACION PACIENTE II-------->
+            <section class="section">
+                <fieldset class="scheduler-border">
+                    <legend class="scheduler-border has-text-grey">Información adicional del paciente</legend>
+                    <section class="section">
+                        <table class="table is-fullwidth is-narrow">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <!---RFC PACIENTE--->
+                                        <table class="table is-narrow" style="width: 600px;">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="columns is-multiline">
+                                                            <div class="column is-6" style="width: 280px;">
+                                                                <span>
+                                                                    <strong
+                                                                        class="has-text-grey-darker has-text-weight-medium is-size-5">
+                                                                        RFC:
+                                                                    </strong>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="is-size-5">
+                                                            FIRL9804286C8
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <!---CURP PACIENTE--->
+                                        <table class="table is-narrow" style="width: 600px;">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="columns is-multiline">
+                                                            <div class="column is-6" style="width: 280px;">
+                                                                <span>
+                                                                    <strong
+                                                                        class="has-text-grey-darker has-text-weight-semibold is-size-5">
+                                                                        CURP:
+                                                                    </strong>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="is-size-5">
+                                                            FIRL950428HDF02
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </fieldset>
+            </section>
+<!--------LEYENDA-------->
+            <section class="section">
+                <div class="has-text-grey-darker has-text-weight-semibold is-size-5" align="center">
+                    Lunes a Domingo de 9:00 a 21:00 hrs. <br>
+                    FAVOR DE TRAER SU RECETA EN LA PRÓXIMA CITA.
+                </div>
+            </section>
+        </section>
+    </section>
+</body>
+
+</html>
